@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Aunt Louisa — A Short Film</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css"/>
+        <style>body { margin: 0; background-color: #000; color: #eaeaea; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; padding: 20px; } .container { max-width: 800px; margin: 0 auto; text-align: center; } h1 { font-size: 1.8em; margin-bottom: 0.2em; } .subtitle { font-style: italic; font-size: 1em; margin-bottom: 1em; } .video-wrapper { aspect-ratio: 2.39 / 1; margin-bottom: 2em; } video { width: 100%; border-radius: 8px; box-shadow: 0 0 30px rgba(0,0,0,0.6); } .credits { font-size: 0.95em; line-height: 1.6em; margin-top: 2em; white-space: pre-wrap; text-align: right; } .credits strong { display: block; margin-top: 1.5em; font-size: 1.1em; }</style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="video-wrapper">
+                <video id="player" playsinline controls poster="poster.jpg">
+                    <source src="https://1899ba5ec3bd025cdf0a0f020dec2719.r2.cloudflarestorage.com/videos/250319_AL%20Full%20Movie.mp4" type="video/mp4"/>
+                </video>
+            </div>
+            <h1 style="text-align: right; font-size: 36px;">"Aunt Louisa"</h1>
+            <div class="subtitle" style="text-align: right; font-size: 22px;">
+                <span style="font-style: normal;">A Short Film by Thomas Woodrow</span>
+                <br>16 minutes
+            </div>
+            <div class="credits" style="font-size: 22px;">Written and Directed by Thomas Woodrow<br>
+                Produced by Daniela Albin<br>
+                Casting by Lauren Charkow<br>
+                Cinematography by Zoë White<br>
+                Edited by Ryan Murphy<br>
+                Music by Haim Mazar<br>
+                <strong>Featuring:</strong>
+                Sean Meehan<br>
+                Mary Elaine Monti<br>
+                Raisa Rubin<br>
+                and Rebekah Paltrow Neumann
+            </div>
+        </div>
+        <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+        <script>
+    const player = new Plyr('#player', {
+      controls: [
+        'play-large', 'play', 'progress', 'current-time',
+        'mute', 'volume', 'captions', 'settings', 'fullscreen'
+      ],
+      fullscreen: { enabled: true, fallback: true },
+      disableContextMenu: true,
+      ratio: '2.39:1',
+      settings: ['quality'],
+    });
+  </script>
+    </body>
+</html>
